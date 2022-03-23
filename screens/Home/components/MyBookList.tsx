@@ -9,9 +9,13 @@ import {
 } from 'react-native';
 import React from 'react';
 import {COLORS, dummyData, FONTS, icons, SIZES} from '../../../constants';
+import {useNavigation} from '@react-navigation/native';
+import {HomeScreenProp} from '../../../types';
 
 const {myBooksData} = dummyData;
+
 const MyBookList = () => {
+  const navigation = useNavigation<HomeScreenProp>();
   const booksLength = myBooksData.length;
 
   const renderInfo = (icon: ImageSourcePropType, info: string) => (
@@ -55,6 +59,9 @@ const MyBookList = () => {
           return (
             <TouchableOpacity
               key={item.id}
+              onPress={() =>
+                navigation.navigate('BookDetails', {bookId: item.id})
+              }
               style={{
                 height: 260,
                 width: 160,

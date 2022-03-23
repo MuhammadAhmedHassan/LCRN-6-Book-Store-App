@@ -12,6 +12,8 @@ import {
 import React, {useState} from 'react';
 import {COLORS, dummyData, FONTS, icons, SIZES} from '../../../constants';
 import {BookType} from '../../../constants/dummy-data';
+import {useNavigation} from '@react-navigation/native';
+import {HomeScreenProp} from '../../../types';
 
 const {categoriesData} = dummyData;
 
@@ -45,7 +47,9 @@ interface IBooksList {
 }
 
 function BooksList({booksList}: IBooksList) {
+  const navigation = useNavigation<HomeScreenProp>();
   const booklistLength = booksList.length;
+
   const renderPagesAndRating = (
     icon: ImageSourcePropType,
     label: string,
@@ -114,6 +118,9 @@ function BooksList({booksList}: IBooksList) {
               marginBottom: lastItem ? SIZES.font : undefined,
             }}>
             <TouchableOpacity
+              onPress={() =>
+                navigation.navigate('BookDetails', {bookId: item.id})
+              }
               style={{
                 flexDirection: 'row',
                 width:
