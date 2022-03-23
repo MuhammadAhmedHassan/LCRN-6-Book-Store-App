@@ -40,7 +40,7 @@ const ActionBar = () => {
         backgroundColor: COLORS.secondary,
         flexDirection: 'row',
         marginHorizontal: SIZES.padding,
-        marginVertical: SIZES.padding,
+        marginTop: SIZES.padding,
         borderRadius: SIZES.radius,
         paddingHorizontal: SIZES.padding,
         paddingVertical: 20,

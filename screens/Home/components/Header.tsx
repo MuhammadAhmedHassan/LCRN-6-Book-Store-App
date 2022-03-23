@@ -8,7 +8,7 @@ const Header = () => {
       style={{
         flexDirection: 'row',
         marginHorizontal: SIZES.padding,
-        marginVertical: SIZES.padding,
+        marginTop: SIZES.padding,
         alignItems: 'center',
         justifyContent: 'space-between',
       }}>
