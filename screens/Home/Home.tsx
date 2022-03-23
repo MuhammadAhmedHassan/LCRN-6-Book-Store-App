@@ -1,11 +1,19 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, SafeAreaView, StatusBar} from 'react-native';
 import React from 'react';
+import {COLORS} from '../../constants';
+import {Header} from './components';
 
 const Home = () => {
   return (
-    <View>
-      <Text>Home Screen</Text>
-    </View>
+    <SafeAreaView style={{flex: 1, backgroundColor: COLORS.black}}>
+      <StatusBar />
+
+      {/* Header */}
+      <Header />
+      <View>
+        <Text>Home Screen</Text>
+      </View>
+    </SafeAreaView>
   );
 };
 
