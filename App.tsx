@@ -4,6 +4,7 @@ import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {RootStackParamList} from './types';
 import {HomeTabs} from './navigation';
+import { BookDetail } from './screens';
 
 const theme = {
   ...DefaultTheme,
@@ -30,7 +31,7 @@ const App = () => {
         <Stack.Screen name="HomeTabs" component={HomeTabs} />
         <Stack.Screen
           name="BookDetails"
-          component={() => <Text>BookDetails</Text>}
+          component={BookDetail}
         />
       </Stack.Navigator>
     </NavigationContainer>

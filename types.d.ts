@@ -1,3 +1,4 @@
+import {RouteProp} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 
 export type HomeBottomTabParamList = {
@@ -15,7 +16,8 @@ export type RootStackParamList = {
 };
 
 export type HomeScreenProp = StackNavigationProp<RootStackParamList, 'Home'>;
-export type BookDetailsScreenProp = StackNavigationProp<
+export type BookDetailScreenProp = StackNavigationProp<
   RootStackParamList,
   'BookDetails'
 >;
+export type BookDetailRouteProps = RouteProp<RootStackParamList, 'BookDetails'>;
