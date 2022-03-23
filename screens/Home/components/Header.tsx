@@ -14,7 +14,7 @@ const Header = () => {
       }}>
       <View>
         <Text style={{...FONTS.h4, color: COLORS.white}}>Good Morning</Text>
-        <Text style={{...FONTS.h3, color: COLORS.white, marginTop: SIZES.base}}>
+        <Text style={{...FONTS.h3, color: COLORS.white, marginTop: 4}}>
           Batricia Salfiora
         </Text>
       </View>

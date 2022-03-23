@@ -1,8 +1,9 @@
 import {StyleSheet, Text, View, SafeAreaView, StatusBar} from 'react-native';
 import React from 'react';
 import {COLORS} from '../../constants';
-import {ActionBar, Header} from './components';
+import {ActionBar, CategoryList, Header} from './components';
 import MyBookList from './components/MyBookList';
+import {ScrollView} from 'react-native-gesture-handler';
 
 const Home = () => {
   return (
@@ -15,11 +16,17 @@ const Home = () => {
       {/* ActionBar */}
       <ActionBar />
 
-      {/* My Book list */}
-      <MyBookList />
-      <View>
-        <Text>Home Screen</Text>
-      </View>
+      <ScrollView
+        automaticallyAdjustContentInsets={true}
+        style={{
+          // backgroundColor: 'pink',
+        }}>
+        {/* My Book list */}
+        <MyBookList />
+
+        {/* Category list */}
+        <CategoryList />
+      </ScrollView>
     </SafeAreaView>
   );
 };
