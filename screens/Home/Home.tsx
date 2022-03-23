@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View, SafeAreaView, StatusBar} from 'react-native';
 import React from 'react';
 import {COLORS} from '../../constants';
-import {Header} from './components';
+import {ActionBar, Header} from './components';
 
 const Home = () => {
   return (
@@ -10,6 +10,9 @@ const Home = () => {
 
       {/* Header */}
       <Header />
+
+      {/* ActionBar */}
+      <ActionBar />
       <View>
         <Text>Home Screen</Text>
       </View>

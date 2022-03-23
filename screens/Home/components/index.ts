@@ -1,3 +1,4 @@
+import ActionBar from './ActionBar';
 import Header from './Header';
 
-export {Header};
+export {Header, ActionBar};
