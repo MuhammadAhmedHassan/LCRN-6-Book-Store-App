@@ -1,3 +1,4 @@
+import BookInfo from './BookInfo';
 import Header from './Header';
 
-export {Header};
+export {Header, BookInfo};
